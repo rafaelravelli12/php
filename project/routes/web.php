@@ -34,7 +34,9 @@ Route::controller(AboutController::class)->group(function () {
     Route::get('/about/multi/image', 'aboutMultiImage')->name('about.multi.image');
     Route::post('/store/multi/image', 'storeMultiImage')->name('store.multi.image');
     Route::get('/all/multi/image', 'allMultiImage') -> name('all.multi.image');
-
+    Route::get('/edit/multi/image/{id}', 'editMultiImage') -> name('edit.multi.image');
+    Route::post('/update/multi/image', 'updateMultiImage') -> name('update.multi.image');
+    Route::get('/delete/multi/image/{id}', 'deleteMultiImage') -> name('delete.multi.image');
 });
 
 require __DIR__ . '/auth.php';
