@@ -666,6 +666,9 @@ select {
     max-width: 1536px;
   }
 }
+.collapse {
+  visibility: collapse;
+}
 .fixed {
   position: fixed;
 }
@@ -834,6 +837,9 @@ select {
 }
 .shrink-0 {
   flex-shrink: 0;
+}
+.border-collapse {
+  border-collapse: collapse;
 }
 .origin-top {
   transform-origin: top;

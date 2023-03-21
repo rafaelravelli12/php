@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Home\HomeSliderController;
+use App\Http\Controllers\Home\AboutController;
 
 Route::get('/', function () {
     return view('frontend.index');
@@ -24,6 +25,16 @@ Route::controller(AdminController::class)->group(function () {
 Route::controller(HomeSliderController::class)->group(function () {
     Route::get('/home/slide', 'homeSlider')->name('home.slide');
     Route::post('/update/slide', 'updateSlider')->name('update.slide');
+});
+
+Route::controller(AboutController::class)->group(function () {
+    Route::get('/about/page', 'aboutPage')->name('about.page');
+    Route::post('/update/about', 'updateAbout')->name('update.about');
+    Route::get('/about', 'homeAbout')->name('home.about');
+    Route::get('/about/multi/image', 'aboutMultiImage')->name('about.multi.image');
+    Route::post('/store/multi/image', 'storeMultiImage')->name('store.multi.image');
+    Route::get('/all/multi/image', 'allMultiImage') -> name('all.multi.image');
+
 });
 
 require __DIR__ . '/auth.php';
