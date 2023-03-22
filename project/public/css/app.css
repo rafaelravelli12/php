@@ -1071,6 +1071,9 @@ select {
 .text-center {
   text-align: center;
 }
+.text-end {
+  text-align: end;
+}
 .align-middle {
   vertical-align: middle;
 }
