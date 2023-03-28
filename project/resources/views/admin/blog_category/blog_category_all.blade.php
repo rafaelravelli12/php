@@ -23,10 +23,9 @@
                                         <th>Action</th>
                                 </thead>
                                 <tbody>
-                                    @php($i = 1)
-                                    @foreach ($blogcategory as $item)
+                                    @foreach ($blogcategory as $key => $item)
                                         <tr>
-                                            <td> {{ $i++ }} </td>
+                                            <td> {{ $key + 1 }} </td>
                                             <td> {{ $item->blog_category }} </td>
                                             <td>
                                                 <a href="{{ route('edit.blog.category', $item->id) }}" class="btn btn-info sm" title="Edit Data"> <i

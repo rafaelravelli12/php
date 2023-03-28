@@ -9,22 +9,31 @@ use App\Http\Controllers\Home\BlogCategoryController;
 use App\Http\Controllers\Home\BlogController;
 use App\Http\Controllers\Home\FooterController;
 use App\Http\Controllers\Home\ContactController;
+use App\Http\Controllers\Demo\DemoController;
 
 Route::get('/', function () {
     return view('frontend.index');
+});
+
+Route::controller(DemoController::class)->group(function () {
+    Route::get('/', 'HomeMain')->name('home');
+    // Route::get('/about', 'Index')->name('about.page')->middleware('check');
+    // Route::get('/contact', 'ContactMethod')->name('cotact.page');
 });
 
 Route::get('/dashboard', function () {
     return view('admin.index');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::controller(AdminController::class)->group(function () {
-    Route::get('/admin/logout', 'destroy')->name('admin.logout');
-    Route::get('/admin/profile', 'profile')->name('admin.profile');
-    Route::get('/edit/profile', 'editProfile')->name('edit.profile');
-    Route::post('/store/profile', 'storeProfile')->name('store.profile');
-    Route::get('/change/password', 'changePassword')->name('change.password');
-    Route::post('/update/password', 'updatePassword')->name('update.password');
+Route::middleware(['auth'])->group(function () {
+    Route::controller(AdminController::class)->group(function () {
+        Route::get('/admin/logout', 'destroy')->name('admin.logout');
+        Route::get('/admin/profile', 'profile')->name('admin.profile');
+        Route::get('/edit/profile', 'editProfile')->name('edit.profile');
+        Route::post('/store/profile', 'storeProfile')->name('store.profile');
+        Route::get('/change/password', 'changePassword')->name('change.password');
+        Route::post('/update/password', 'updatePassword')->name('update.password');
+    });
 });
 
 Route::controller(HomeSliderController::class)->group(function () {
