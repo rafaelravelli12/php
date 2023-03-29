@@ -11,24 +11,21 @@
                     <div class="menu__wrap">
                         <nav class="menu__nav">
                             <div class="logo">
-                                <a href="index.html" class="logo__black"><img src="{{ asset('frontend/assets/img/logo/logo_black.png') }}"
-                                        alt=""></a>
-                                <a href="index.html" class="logo__white"><img src="{{ asset('frontend/assets/img/logo/logo_white.png') }}"
-                                        alt=""></a>
+                                <a href="index.html" class="logo__black"><img src="{{ asset('logo/video-camera.png') }}" alt=""></a>
+                                <a href="index.html" class="logo__white"><img src="{{ asset('logo/video-camera.png') }}" alt=""></a>
                             </div>
                             <div class="navbar__wrap main__menu d-none d-xl-flex">
                                 <ul class="navigation">
                                     <li class="{{ $route == 'home' ? 'active' : '' }}"><a href="{{ route('home') }}">Home</a></li>
                                     <li class="{{ $route == 'home.about' ? 'active' : '' }}"><a href="{{ route('home.about') }}">About</a></li>
-                                    <li><a href="services-details.html">Services</a></li>
-                                    <li class="{{ $route == 'home.portfolio' ? 'active' : '' }}"><a href="{{ route('home.portfolio') }}">Portfolio</a>
+                                    <li class="{{ $route == 'home.portfolio' ? 'active' : '' }}"><a href="{{ route('home.portfolio') }}">Movie Genres</a>
                                     </li>
-                                    <li class="{{ $route == 'home.blog' ? 'active' : '' }}"><a href="{{ route('home.blog') }}">Our Blog</a>
+                                    <li class="{{ $route == 'home.blog' ? 'active' : '' }}"><a href="{{ route('home.blog') }}">Movie Reviews</a>
                                     <li class="{{ $route == 'contact.me' ? 'active' : '' }}"><a href="{{ route('contact.me') }}">contact me</a></li>
                                 </ul>
                             </div>
                             <div class="header__btn d-none d-md-block">
-                                <a href="contact.html" class="btn">Contact me</a>
+                                <a href="{{ url('/login') }}" class="btn">Administration</a>
                             </div>
                         </nav>
                     </div>

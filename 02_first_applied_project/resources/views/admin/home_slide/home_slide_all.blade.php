@@ -15,22 +15,29 @@
                                 <div class="row mb-3">
                                     <label for="example-text-input" class="col-sm-2 col-form-label">Title</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" id="example-text-input" name="title" type="text"
-                                            value="{{ $homeSlide->title }}">
+                                        <input class="form-control" id="example-text-input" name="title" type="text" value="{{ $homeSlide->title }}">
                                     </div>
                                 </div>
                                 <div class="row mb-3">
                                     <label for="example-text-input" class="col-sm-2 col-form-label">Short Title</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" id="example-text-input" name="short_title"
-                                            type="text" value="{{ $homeSlide->short_title }}">
+                                        {{-- <input class="form-control" id="example-text-input" name="short_title" type="text" value="{{ $homeSlide->short_title }}"> --}}
+                                        <textarea id="elm1" name="short_title">{{ $homeSlide->short_title }}</textarea>
                                     </div>
                                 </div>
+
+                                {{-- <div class="row mb-3">
+                                    <label for="example-text-input" class="col-sm-2 col-form-label">Blog Description </label>
+                                    <div class="col-sm-10">
+                                        <textarea id="elm1" name="short_title">{{ $homeSlide->short_title }}</textarea>
+                                    </div>
+                                </div> --}}
+
+
                                 <div class="row mb-3">
                                     <label for="example-text-input" class="col-sm-2 col-form-label">Video URL</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" id="example-text-input" name="video_url" type="text"
-                                            value="{{ $homeSlide->video_url }}">
+                                        <input class="form-control" id="example-text-input" name="video_url" type="text" value="{{ $homeSlide->video_url }}">
                                     </div>
                                 </div>
                                 <div class="row mb-3">
@@ -42,11 +49,8 @@
                                 <div class="row mb-3">
                                     <label for="example-text-input" class="col-sm-2 col-form-label"></label>
                                     <div class="col-sm-10">
-                                        <img alt="Card image cap" class="rounded avatar-lg" id="showImage" 
-                                            src="{{ !empty($homeSlide->home_slide) ?
-                                                url($homeSlide->home_slide) :
-                                                url('upload/no_image.jpg') }}"
-                                            >
+                                        <img alt="Card image cap" class="avatar-lg rounded" id="showImage"
+                                            src="{{ !empty($homeSlide->home_slide) ? url($homeSlide->home_slide) : url('upload/no_image.jpg') }}">
                                     </div>
                                 </div>
                                 <input type="submit" class="btn btn-info waves-effect waves-light" value="Update Slide">

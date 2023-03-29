@@ -19,8 +19,7 @@
                     </div>
                 </div>
             </div>
-            <!-- end page title -->
-
+            {{-- <!-- end page title -->
             <div class="row">
                 <div class="col-xl-3 col-md-6">
                     <div class="card">
@@ -103,19 +102,13 @@
                     </div><!-- end card -->
                 </div><!-- end col -->
             </div><!-- end row -->
-
-
-
             <div class="row">
                 <div class="col-xl-12">
                     <div class="card">
                         <div class="card-body">
-
-
                             <h4 class="card-title mb-4">Latest Transactions</h4>
-
                             <div class="table-responsive">
-                                <table class="table table-centered mb-0 align-middle table-hover table-nowrap">
+                                <table class="table-centered table-hover table-nowrap mb-0 table align-middle">
                                     <thead class="table-light">
                                         <tr>
                                             <th>Name</th>
@@ -134,7 +127,7 @@
                                             <td>Web Developer</td>
                                             <td>
                                                 <div class="font-size-13"><i
-                                                        class="ri-checkbox-blank-circle-fill font-size-10 text-success align-middle me-2"></i>Active
+                                                        class="ri-checkbox-blank-circle-fill font-size-10 text-success me-2 align-middle"></i>Active
                                                 </div>
                                             </td>
                                             <td>
@@ -153,7 +146,7 @@
                                             <td>Python Developer</td>
                                             <td>
                                                 <div class="font-size-13"><i
-                                                        class="ri-checkbox-blank-circle-fill font-size-10 text-warning align-middle me-2"></i>Deactive
+                                                        class="ri-checkbox-blank-circle-fill font-size-10 text-warning me-2 align-middle"></i>Deactive
                                                 </div>
                                             </td>
                                             <td>
@@ -172,7 +165,7 @@
                                             <td>Senior Javascript Developer</td>
                                             <td>
                                                 <div class="font-size-13"><i
-                                                        class="ri-checkbox-blank-circle-fill font-size-10 text-success align-middle me-2"></i>Active
+                                                        class="ri-checkbox-blank-circle-fill font-size-10 text-success me-2 align-middle"></i>Active
                                                 </div>
                                             </td>
                                             <td>
@@ -191,7 +184,7 @@
                                             <td>React Developer</td>
                                             <td>
                                                 <div class="font-size-13"><i
-                                                        class="ri-checkbox-blank-circle-fill font-size-10 text-success align-middle me-2"></i>Active
+                                                        class="ri-checkbox-blank-circle-fill font-size-10 text-success me-2 align-middle"></i>Active
                                                 </div>
                                             </td>
                                             <td>
@@ -210,7 +203,7 @@
                                             <td>Senior Web Designer</td>
                                             <td>
                                                 <div class="font-size-13"><i
-                                                        class="ri-checkbox-blank-circle-fill font-size-10 text-success align-middle me-2"></i>Active
+                                                        class="ri-checkbox-blank-circle-fill font-size-10 text-success me-2 align-middle"></i>Active
                                                 </div>
                                             </td>
                                             <td>
@@ -229,7 +222,7 @@
                                             <td>Web Designer</td>
                                             <td>
                                                 <div class="font-size-13"><i
-                                                        class="ri-checkbox-blank-circle-fill font-size-10 text-warning align-middle me-2"></i>Deactive
+                                                        class="ri-checkbox-blank-circle-fill font-size-10 text-warning me-2 align-middle"></i>Deactive
                                                 </div>
                                             </td>
                                             <td>
@@ -248,7 +241,7 @@
                                             <td>Senior Laravel Developer</td>
                                             <td>
                                                 <div class="font-size-13"><i
-                                                        class="ri-checkbox-blank-circle-fill font-size-10 text-success align-middle me-2"></i>Active
+                                                        class="ri-checkbox-blank-circle-fill font-size-10 text-success me-2 align-middle"></i>Active
                                                 </div>
                                             </td>
                                             <td>
@@ -269,7 +262,7 @@
                 <!-- end col -->
 
             </div>
-            <!-- end row -->
+            <!-- end row --> --}}
         </div>
 
     </div>
