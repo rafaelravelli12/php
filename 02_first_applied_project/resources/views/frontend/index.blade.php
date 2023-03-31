@@ -199,7 +199,7 @@
                             <img class="dark" src="{{ asset('frontend/assets/img/icons/wp_icon04.png') }}" alt="">
                         </div>
                         <div class="work__process__content">
-                            <h4 class="title">Deliver</h4>
+                            <h4 class="title">Post</h4>
                             <p>Writing and Proofreading, process to be done alone</p>
                         </div>
                     </div>

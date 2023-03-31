@@ -1,7 +1,7 @@
 @extends('frontend.main_master')
 @section('main')
     <main>
-        <section class="breadcrumb__wrap">
+        <section class="breadcrumb__wrap" style="padding-top: 200px; padding-bottom: 100px;">
             <div class="custom-container container">
                 <div class="row justify-content-center">
                     <div class="col-xl-6 col-lg-8 col-md-10">
@@ -9,7 +9,8 @@
                             <h2 class="title">{{ $blogs->blog_title }}</h2>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="{{ url('/') }}">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="{{ url('/blog') }}">Movie Reviews</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">Blog Details</li>
                                 </ol>
                             </nav>
@@ -17,7 +18,7 @@
                     </div>
                 </div>
             </div>
-            <div class="breadcrumb__wrap__icon">
+            {{-- <div class="breadcrumb__wrap__icon">
                 <ul>
                     <li><img src="assets/img/icons/breadcrumb_icon01.png" alt=""></li>
                     <li><img src="assets/img/icons/breadcrumb_icon02.png" alt=""></li>
@@ -26,7 +27,7 @@
                     <li><img src="assets/img/icons/breadcrumb_icon05.png" alt=""></li>
                     <li><img src="assets/img/icons/breadcrumb_icon06.png" alt=""></li>
                 </ul>
-            </div>
+            </div> --}}
         </section>
         <section class="standard__blog blog__details">
             <div class="container">
@@ -43,7 +44,7 @@
                                 <h2 class="title">{{ $blogs->blog_title }}</h2>
                                 <p> {!! $blogs->blog_description !!} </p>
                             </div>
-                            <div class="blog__details__bottom">
+                            {{-- <div class="blog__details__bottom">
                                 <ul class="blog__details__tag">
                                     <li class="title">Tag:</li>
                                     <li class="tags-list">
@@ -59,8 +60,8 @@
                                         <a href="#"><i class="fab fa-pinterest"></i></a>
                                     </li>
                                 </ul>
-                            </div>
-                            <div class="blog__next__prev">
+                            </div> --}}
+                            {{-- <div class="blog__next__prev">
                                 <div class="row justify-content-between">
                                     <div class="col-xl-5 col-md-6">
                                         <div class="blog__next__prev__item">
@@ -90,8 +91,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="comment comment__wrap">
+                            </div> --}}
+                            {{-- <div class="comment comment__wrap">
                                 <div class="comment__title">
                                     <h4 class="title">(04) Comment</h4>
                                 </div>
@@ -161,8 +162,8 @@
                                         </div>
                                     </li>
                                 </ul>
-                            </div>
-                            <div class="comment__form">
+                            </div> --}}
+                            {{-- <div class="comment__form">
                                 <div class="comment__title">
                                     <h4 class="title">Write your comment</h4>
                                 </div>
@@ -188,18 +189,18 @@
                                     </div>
                                     <button type="submit" class="btn">post a comment</button>
                                 </form>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <aside class="blog__sidebar">
-                            <div class="widget">
+                            {{-- <div class="widget">
                                 <form action="#" class="search-form">
                                     <input type="text" placeholder="Search">
                                     <button type="submit"><i class="fal fa-search"></i></button>
                                 </form>
-                            </div>
-                            <div class="widget">
+                            </div> --}}
+                            {{-- <div class="widget">
                                 <h4 class="widget-title">Recent Blog</h4>
                                 <ul class="rc__post">
                                     @foreach ($allblogs as $all)
@@ -216,7 +217,7 @@
                                         </li>
                                     @endforeach
                                 </ul>
-                            </div>
+                            </div> --}}
                             <div class="widget">
                                 <h4 class="widget-title">Categories</h4>
                                 <ul class="sidebar__cat">
@@ -226,7 +227,7 @@
                                     @endforeach
                                 </ul>
                             </div>
-                            <div class="widget">
+                            {{-- <div class="widget">
                                 <h4 class="widget-title">Recent Comment</h4>
                                 <ul class="sidebar__comment">
                                     <li class="sidebar__comment__item">
@@ -262,13 +263,13 @@
                                     <li><a href="blog.html">landing page</a></li>
                                     <li><a href="blog.html">data</a></li>
                                 </ul>
-                            </div>
+                            </div> --}}
                         </aside>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="homeContact homeContact__style__two">
+        {{-- <section class="homeContact homeContact__style__two">
             <div class="container">
                 <div class="homeContact__wrap">
                     <div class="row">
@@ -297,6 +298,6 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
     </main>
 @endsection

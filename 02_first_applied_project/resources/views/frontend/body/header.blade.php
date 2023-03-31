@@ -11,13 +11,13 @@
                     <div class="menu__wrap">
                         <nav class="menu__nav">
                             <div class="logo">
-                                <a href="index.html" class="logo__black"><img src="{{ asset('logo/video-camera.png') }}" alt=""></a>
-                                <a href="index.html" class="logo__white"><img src="{{ asset('logo/video-camera.png') }}" alt=""></a>
+                                <a href="{{ url('/') }}" class="logo__black"><img src="{{ asset('logo/video-camera - Copy.png') }}" alt=""></a>
+                                <a href="{{ url('/') }}" class="logo__white"><img src="{{ asset('logo/video-camera - Copy.png') }}" alt=""></a>
                             </div>
                             <div class="navbar__wrap main__menu d-none d-xl-flex">
                                 <ul class="navigation">
                                     <li class="{{ $route == 'home' ? 'active' : '' }}"><a href="{{ route('home') }}">Home</a></li>
-                                    <li class="{{ $route == 'home.about' ? 'active' : '' }}"><a href="{{ route('home.about') }}">About</a></li>
+                                    {{-- <li class="{{ $route == 'home.about' ? 'active' : '' }}"><a href="{{ route('home.about') }}">About</a></li> --}}
                                     <li class="{{ $route == 'home.portfolio' ? 'active' : '' }}"><a href="{{ route('home.portfolio') }}">Movie Genres</a>
                                     </li>
                                     <li class="{{ $route == 'home.blog' ? 'active' : '' }}"><a href="{{ route('home.blog') }}">Movie Reviews</a>
@@ -25,7 +25,7 @@
                                 </ul>
                             </div>
                             <div class="header__btn d-none d-md-block">
-                                <a href="{{ url('/login') }}" class="btn">Administration</a>
+                                <a href="{{ url('/login') }}" class="btn">Site Administration</a>
                             </div>
                         </nav>
                     </div>

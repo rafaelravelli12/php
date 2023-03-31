@@ -1,7 +1,7 @@
 @extends('frontend.main_master')
 @section('main')
     <main>
-        <section class="breadcrumb__wrap">
+        <section class="breadcrumb__wrap" style="padding-top: 200px; padding-bottom: 100px;">
             <div class="custom-container container">
                 <div class="row justify-content-center">
                     <div class="col-xl-6 col-lg-8 col-md-10">
@@ -9,7 +9,7 @@
                             <h2 class="title">Genres Page</h2>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="{{ url('/') }}">Home</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">Genres</li>
                                 </ol>
                             </nav>
@@ -17,7 +17,7 @@
                     </div>
                 </div>
             </div>
-            <div class="breadcrumb__wrap__icon">
+            {{-- <div class="breadcrumb__wrap__icon">
                 <ul>
                     <li><img src="assets/img/icons/breadcrumb_icon01.png" alt=""></li>
                     <li><img src="assets/img/icons/breadcrumb_icon02.png" alt=""></li>
@@ -26,7 +26,7 @@
                     <li><img src="assets/img/icons/breadcrumb_icon05.png" alt=""></li>
                     <li><img src="assets/img/icons/breadcrumb_icon06.png" alt=""></li>
                 </ul>
-            </div>
+            </div> --}}
         </section>
         <section class="portfolio__inner">
             <div class="container">
@@ -36,51 +36,24 @@
                             <div class="row gx-0 align-items-center">
                                 <div class="col-lg-6 col-md-10">
                                     <div class="portfolio__inner__thumb">
-                                        <a href="portfolio-details.html">
+                                        <a href="{{ route('portfolio.details', $item->id) }}">
                                             <img src="{{ asset($item->portfolio_image) }}" alt="">
                                         </a>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-10">
                                     <div class="portfolio__inner__content">
+                                        <div class="section__title">
+                                            <span class="sub-title">{{ $item->portfolio_name }}</span>
+                                        </div>
                                         <h2 class="title"><a href="{{ route('portfolio.details', $item->id) }}">{{ $item->portfolio_title }}</a></h2>
                                         <p>{!! Str::limit($item->portfolio_description, 200) !!} </p>
-                                        <a href="{{ route('portfolio.details', $item->id) }}" class="link">View Case Study</a>
+                                        <a href="{{ route('portfolio.details', $item->id) }}" class="link">Expand genre</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     @endforeach
-                </div>
-            </div>
-        </section>
-        <section class="homeContact homeContact__style__two">
-            <div class="container">
-                <div class="homeContact__wrap">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="section__title">
-                                <span class="sub-title">07 - Say hello</span>
-                                <h2 class="title">Any questions? Feel free <br> to contact</h2>
-                            </div>
-                            <div class="homeContact__content">
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form
-                                </p>
-                                <h2 class="mail"><a href="mailto:Info@webmail.com">Info@webmail.com</a></h2>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="homeContact__form">
-                                <form action="#">
-                                    <input type="text" placeholder="Enter name*">
-                                    <input type="email" placeholder="Enter mail*">
-                                    <input type="number" placeholder="Enter number*">
-                                    <textarea name="message" placeholder="Enter Massage*"></textarea>
-                                    <button type="submit">Send Message</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>

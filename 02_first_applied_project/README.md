@@ -16,8 +16,8 @@ https://getcomposer.org/
 This software uses Node 19 Version, installed from NVM:
 https://github.com/coreybutler/nvm-windows
 
-This software was developed in WAMP ambient:
-https://www.wampserver.com/en/
+This software was developed in MySQL Server + Workbench ambient:
+https://dev.mysql.com/downloads/installer/
 
 This software was developed in HeidiSQL database administration tool:
 https://www.heidisql.com/
@@ -27,12 +27,17 @@ https://code.visualstudio.com/
 
 ------------
 
-Required terminal commands to run Cloned Project:
+Required commands to run Cloned Project:
 
-- composer install
-- npm install
-- php artisan migrate
-- php artisan serve
-- npm run watch
+- configure .env based on .env.example
+- /composer install
+- /npm install
+- /php artisan serve
+- /npm run watch
+- query database.sql
+- Administration 
+	Login page: http://127.0.0.1:8000/login
+	Administration username: rafaelravelli
+	Administration password: Mudar123
 
 Graciously,

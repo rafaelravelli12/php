@@ -18,19 +18,19 @@
             <div class="col-lg-6">
                 <div class="about__content">
                     <div class="section__title">
-                        <span class="sub-title">About me</span>
+                        <span class="sub-title">About</span>
                         <h2 class="title">{{ $aboutPage->title }}</h2>
                     </div>
                     <div class="about__exp">
                         <div class="about__exp__icon">
-                            <img src=" {{ asset('backend/assets/img/icons/about_icon.png') }}" alt="">
+                            <img src=" {{ asset('frontend/assets/img/icons/about_icon.png') }}" alt="">
                         </div>
                         <div class="about__exp__content">
-                            <p>{{ $aboutPage->short_title }}</p>
+                            <p><span>{{ $aboutPage->short_title }}</span></p>
                         </div>
                     </div>
                     <p class="desc">{{ $aboutPage->short_description }}</p>
-                    <a href="about.html" class="btn">Download my resume</a>
+                    {{-- <a href="about.html" class="btn">Expand about</a> --}}
                 </div>
             </div>
         </div>
