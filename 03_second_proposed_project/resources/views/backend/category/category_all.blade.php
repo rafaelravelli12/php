@@ -22,7 +22,8 @@
                         <div class="card-body">
 
                             <a href="{{ route('category.add') }}" class="btn btn-dark btn-rounded waves-effect waves-light"
-                                style="float:right;">Add Category </a> <br> <br>
+                                style="float:right;"><i class="fas fa-plus-circle"> Add Category </i></a> <br> <br>
+
 
 
                             <h4 class="card-title">Category All Data </h4>
@@ -50,8 +51,9 @@
                                                     title="Edit Data"> <i class="fas fa-edit"></i> </a>
 
 
-                                                <a href="{{ route('category.delete', $item->id) }}" class="btn btn-danger sm"
-                                                    title="Delete Data" id="delete"> <i class="fas fa-trash-alt"></i>
+                                                <a href="{{ route('category.delete', $item->id) }}"
+                                                    class="btn btn-danger sm" title="Delete Data" id="delete"> <i
+                                                        class="fas fa-trash-alt"></i>
                                                 </a>
 
 

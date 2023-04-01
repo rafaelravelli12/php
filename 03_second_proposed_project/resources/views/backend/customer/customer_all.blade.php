@@ -22,7 +22,8 @@
                         <div class="card-body">
 
                             <a href="{{ route('customer.add') }}" class="btn btn-dark btn-rounded waves-effect waves-light"
-                                style="float:right;">Add Customer </a> <br> <br>
+                                style="float:right;"><i class="fas fa-plus-circle"> Add Customer </i></a> <br> <br>
+
 
 
                             <h4 class="card-title">Customer All Data </h4>
@@ -56,8 +57,9 @@
                                                 <a href="{{ route('customer.edit', $item->id) }}" class="btn btn-info sm"
                                                     title="Edit Data"> <i class="fas fa-edit"></i> </a>
 
-                                                <a href="{{ route('customer.delete', $item->id) }}" class="btn btn-danger sm"
-                                                    title="Delete Data" id="delete"> <i class="fas fa-trash-alt"></i>
+                                                <a href="{{ route('customer.delete', $item->id) }}"
+                                                    class="btn btn-danger sm" title="Delete Data" id="delete"> <i
+                                                        class="fas fa-trash-alt"></i>
                                                 </a>
 
 

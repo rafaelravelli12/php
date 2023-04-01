@@ -29,6 +29,13 @@ class DefaultController extends Controller
         return response()->json($allProduct);
     } // End Mehtod 
 
+    public function GetStock(Request $request){
+        $product_id = $request->product_id;
+        $stock = Product::where('id',$product_id)->first()->quantity;
+        return response()->json($stock);
+
+    } // End Mehtod 
+
 
 
 

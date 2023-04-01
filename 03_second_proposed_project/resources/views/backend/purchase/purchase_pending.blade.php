@@ -22,7 +22,8 @@
                         <div class="card-body">
 
                             <a href="{{ route('purchase.add') }}" class="btn btn-dark btn-rounded waves-effect waves-light"
-                                style="float:right;"> Purchase Pending </a> <br> <br>
+                                style="float:right;"><i class="fas fa-plus-circle"> Purchase Pending </i></a> <br> <br>
+
 
 
                             <h4 class="card-title">Purchase All Pending Data </h4>
