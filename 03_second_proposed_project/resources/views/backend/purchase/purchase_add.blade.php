@@ -47,10 +47,10 @@
 
                                 <div class="col-md-4">
                                     <div class="md-3">
+                                        <label for="example-text-input" class="form-label">Category </label>
                                         <select name="category_id" id="category_id" class="form-select select2"
                                             aria-label="Default select example">
 
-                                            aria-label="Default select example">
                                             <option selected="">Open this select menu</option>
 
                                         </select>

@@ -11,7 +11,7 @@ use App\Http\Controllers\Pos\ProductController;
 use App\Http\Controllers\Pos\PurchaseController;
 use App\Http\Controllers\Pos\DefaultController;
 use App\Http\Controllers\Pos\InvoiceController;
-
+use App\Http\Controllers\Pos\StockController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -22,15 +22,17 @@ Route::controller(DemoController::class)->group(function () {
     Route::get('/contact', 'ContactMethod')->name('cotact.page');
 });
 
- // Admin All Route 
-Route::controller(AdminController::class)->group(function () {
-    Route::get('/admin/logout', 'destroy')->name('admin.logout');
-    Route::get('/admin/profile', 'Profile')->name('admin.profile');
-    Route::get('/edit/profile', 'EditProfile')->name('edit.profile');
-    Route::post('/store/profile', 'StoreProfile')->name('store.profile');
-    Route::get('/change/password', 'ChangePassword')->name('change.password');
-    Route::post('/update/password', 'UpdatePassword')->name('update.password');
-});
+Route::middleware('auth')->group(function(){
+    // Admin All Route 
+    Route::controller(AdminController::class)->group(function () {
+        Route::get('/admin/logout', 'destroy')->name('admin.logout');
+        Route::get('/admin/profile', 'Profile')->name('admin.profile');
+        Route::get('/edit/profile', 'EditProfile')->name('edit.profile');
+        Route::post('/store/profile', 'StoreProfile')->name('store.profile');
+        Route::get('/change/password', 'ChangePassword')->name('change.password');
+        Route::post('/update/password', 'UpdatePassword')->name('update.password');
+    });
+}); // End Group Middleware
 
 Route::get('/dashboard', function () {
     return view('admin.index');
@@ -52,6 +54,16 @@ Route::controller(CustomerController::class)->group(function () {
     Route::get('/customer/edit/{id}', 'CustomerEdit')->name('customer.edit');
     Route::post('/customer/update', 'CustomerUpdate')->name('customer.update');
     Route::get('/customer/delete/{id}', 'CustomerDelete')->name('customer.delete');
+    Route::get('/credit/customer', 'CreditCustomer')->name('credit.customer');
+    Route::get('/credit/customer/print/pdf', 'CreditCustomerPrintPdf')->name('credit.customer.print.pdf');
+    Route::get('/customer/edit/invoice/{invoice_id}', 'CustomerEditInvoice')->name('customer.edit.invoice');
+    Route::post('/customer/update/invoice/{invoice_id}', 'CustomerUpdateInvoice')->name('customer.update.invoice');
+    Route::get('/customer/invoice/details/{invoice_id}', 'CustomerInvoiceDetails')->name('customer.invoice.details.pdf');
+    Route::get('/paid/customer', 'PaidCustomer')->name('paid.customer');
+    Route::get('/paid/customer/print/pdf', 'PaidCustomerPrintPdf')->name('paid.customer.print.pdf');
+    Route::get('/customer/wise/report', 'CustomerWiseReport')->name('customer.wise.report');
+    Route::get('/customer/wise/credit/report', 'CustomerWiseCreditReport')->name('customer.wise.credit.report');
+    Route::get('/customer/wise/paid/report', 'CustomerWisePaidReport')->name('customer.wise.paid.report');
 });
 
 Route::controller(UnitController::class)->group(function () {
@@ -109,6 +121,16 @@ Route::controller(InvoiceController::class)->group(function () {
     Route::get('/print/invoice/{id}', 'PrintInvoice')->name('print.invoice');
     Route::get('/daily/invoice/report', 'DailyInvoiceReport')->name('daily.invoice.report');
     Route::get('/daily/invoice/pdf', 'DailyInvoicePdf')->name('daily.invoice.pdf');
+});
+
+Route::controller(StockController::class)->group(function () {
+    Route::get('/stock/report', 'StockReport')->name('stock.report'); 
+    Route::get('/stock/report/pdf', 'StockReportPdf')->name('stock.report.pdf');
+    Route::get('/stock/supplier/wise', 'StockSupplierWise')->name('stock.supplier.wise'); 
+    Route::get('/supplier/wise/pdf', 'SupplierWisePdf')->name('supplier.wise.pdf');
+    Route::get('/product/wise/pdf', 'ProductWisePdf')->name('product.wise.pdf');
+
+
 });
 
 require __DIR__.'/auth.php';
