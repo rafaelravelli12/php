@@ -14,11 +14,11 @@ class SupplierController extends Controller
         // $suppliers = Supplier::all();
         $suppliers = Supplier::latest()->get();
         return view('backend.supplier.supplier_all',compact('suppliers'));
-    } // End Method 
+    }
 
     public function SupplierAdd(){
         return view('backend.supplier.supplier_add');
-    } // End Method 
+    }
 
     public function SupplierStore(Request $request){
         Supplier::insert([
@@ -34,12 +34,12 @@ class SupplierController extends Controller
             'alert-type' => 'success'
         );
         return redirect()->route('supplier.all')->with($notification);
-    } // End Method 
+    }
 
     public function SupplierEdit($id){
         $supplier = Supplier::findOrFail($id);
         return view('backend.supplier.supplier_edit',compact('supplier'));
-    } // End Method 
+    }
 
     public function SupplierUpdate(Request $request){
         $sullier_id = $request->id;
@@ -56,7 +56,7 @@ class SupplierController extends Controller
             'alert-type' => 'success'
         );
         return redirect()->route('supplier.all')->with($notification);
-    } // End Method 
+    }
 
     public function SupplierDelete($id){
         Supplier::findOrFail($id)->delete();
@@ -64,6 +64,6 @@ class SupplierController extends Controller
             'message' => 'Supplier Deleted Successfully', 
             'alert-type' => 'success'
         );
-            return redirect()->back()->with($notification);
-        } // End Method 
+        return redirect()->back()->with($notification);
+    }
 }

@@ -13,7 +13,6 @@ class AdminController extends Controller
         Auth::guard('web')->logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-
         $notification = array(
             'message' => 'User Logout Successfully', 
             'alert-type' => 'success'
@@ -39,7 +38,6 @@ class AdminController extends Controller
         $data->name = $request->name;
         $data->email = $request->email;
         $data->username = $request->username;
-
         if ($request->file('profile_image')) {
            $file = $request->file('profile_image');
            $filename = date('YmdHi').$file->getClientOriginalName();
@@ -47,7 +45,6 @@ class AdminController extends Controller
            $data['profile_image'] = $filename;
         }
         $data->save();
-
         $notification = array(
             'message' => 'Admin Profile Updated Successfully', 
             'alert-type' => 'info'
@@ -64,15 +61,12 @@ class AdminController extends Controller
             'oldpassword' => 'required',
             'newpassword' => 'required',
             'confirm_password' => 'required|same:newpassword',
-
         ]);
-
         $hashedPassword = Auth::user()->password;
         if (Hash::check($request->oldpassword,$hashedPassword )) {
             $users = User::find(Auth::id());
             $users->password = bcrypt($request->newpassword);
             $users->save();
-
             session()->flash('message','Password Updated Successfully');
             return redirect()->back();
         } else{
@@ -81,4 +75,3 @@ class AdminController extends Controller
         }
     }
 }
- 
