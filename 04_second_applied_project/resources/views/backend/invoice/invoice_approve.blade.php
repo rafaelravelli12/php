@@ -2,35 +2,25 @@
 @section('admin')
     <div class="page-content">
         <div class="container-fluid">
-
-            <!-- start page title -->
             <div class="row">
                 <div class="col-12">
                     <div class="page-title-box d-sm-flex align-items-center justify-content-between">
                         <h4 class="mb-sm-0">Inovice Approve</h4>
-
-
-
                     </div>
                 </div>
             </div>
-            <!-- end page title -->
-
             @php
                 $payment = App\Models\Payment::where('invoice_id', $invoice->id)->first();
             @endphp
-
             <div class="row">
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
                             <h4>Invoice No: #{{ $invoice->invoice_no }} - {{ date('d-m-Y', strtotime($invoice->date)) }}
                             </h4>
-
                             <a href="{{ route('invoice.pending.list') }}"
                                 class="btn btn-dark btn-rounded waves-effect waves-light" style="float:right;"><i
                                     class="fa fa-list"> Pending Invoice List </i></a> <br> <br>
-
                             <table class="table table-dark" width="100%">
                                 <tbody>
                                     <tr>
@@ -47,7 +37,6 @@
                                             <p> Email: <strong> {{ $payment['customer']['email'] }} </strong> </p>
                                         </td>
                                     </tr>
-
                                     <tr>
                                         <td></td>
                                         <td colspan="3">
@@ -55,7 +44,6 @@
                                         </td>
                                     </tr>
                                 </tbody>
-
                             </table>
                             <form method="post" action="{{ route('approval.store', $invoice->id) }}">
                                 @csrf
@@ -70,7 +58,6 @@
                                             <th class="text-center">Unit Price </th>
                                             <th class="text-center">Total Price</th>
                                         </tr>
-
                                     </thead>
                                     <tbody>
                                         @php
@@ -105,40 +92,26 @@
                                             <td colspan="6"> Discount </td>
                                             <td> {{ $payment->discount_amount }} </td>
                                         </tr>
-
                                         <tr>
                                             <td colspan="6"> Paid Amount </td>
                                             <td>{{ $payment->paid_amount }} </td>
                                         </tr>
-
                                         <tr>
                                             <td colspan="6"> Due Amount </td>
                                             <td> {{ $payment->due_amount }} </td>
                                         </tr>
-
                                         <tr>
                                             <td colspan="6"> Grand Amount </td>
                                             <td>{{ $payment->total_amount }}</td>
                                         </tr>
                                     </tbody>
-
                                 </table>
-
                                 <button type="submit" class="btn btn-info">Invoice Approve </button>
-
-
-
                             </form>
-
-
-
                         </div>
                     </div>
-                </div> <!-- end col -->
-            </div> <!-- end row -->
-
-
-
-        </div> <!-- container-fluid -->
+                </div>
+            </div>
+        </div>
     </div>
 @endsection

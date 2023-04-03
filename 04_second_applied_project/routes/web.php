@@ -14,7 +14,7 @@ use App\Http\Controllers\Pos\InvoiceController;
 use App\Http\Controllers\Pos\StockController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('login');
 });
 
 Route::controller(DemoController::class)->group(function () {
@@ -22,8 +22,12 @@ Route::controller(DemoController::class)->group(function () {
     Route::get('/contact', 'ContactMethod')->name('cotact.page');
 });
 
+// Login
+Route::get('/dashboard', function () {
+    return view('admin.index');
+})->middleware(['auth'])->name('dashboard');
+
 Route::middleware('auth')->group(function(){
-    // Admin All Route 
     Route::controller(AdminController::class)->group(function () {
         Route::get('/admin/logout', 'destroy')->name('admin.logout');
         Route::get('/admin/profile', 'Profile')->name('admin.profile');
@@ -32,11 +36,7 @@ Route::middleware('auth')->group(function(){
         Route::get('/change/password', 'ChangePassword')->name('change.password');
         Route::post('/update/password', 'UpdatePassword')->name('update.password');
     });
-}); // End Group Middleware
-
-Route::get('/dashboard', function () {
-    return view('admin.index');
-})->middleware(['auth'])->name('dashboard');
+});
 
 Route::controller(SupplierController::class)->group(function () {
     Route::get('/supplier/all', 'SupplierAll')->name('supplier.all'); 

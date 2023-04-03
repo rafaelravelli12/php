@@ -9,37 +9,29 @@ use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
-     public function destroy(Request $request)
-    {
+    public function destroy(Request $request){
         Auth::guard('web')->logout();
-
         $request->session()->invalidate();
-
         $request->session()->regenerateToken();
 
         $notification = array(
             'message' => 'User Logout Successfully', 
             'alert-type' => 'success'
         );
-
         return redirect('/login')->with($notification);
-    } // End Method 
-
+    }
 
     public function Profile(){
         $id = Auth::user()->id;
         $adminData = User::find($id);
-        return view('admin.admin_profile_view',compact('adminData'));
-
-    }// End Method 
-
+        return view('admin.profile',compact('adminData'));
+    }
 
     public function EditProfile(){
-
         $id = Auth::user()->id;
         $editData = User::find($id);
-        return view('admin.admin_profile_edit',compact('editData'));
-    }// End Method 
+        return view('admin.profile_edit',compact('editData'));
+    }
 
     public function StoreProfile(Request $request){
         $id = Auth::user()->id;
@@ -50,7 +42,6 @@ class AdminController extends Controller
 
         if ($request->file('profile_image')) {
            $file = $request->file('profile_image');
-
            $filename = date('YmdHi').$file->getClientOriginalName();
            $file->move(public_path('upload/admin_images'),$filename);
            $data['profile_image'] = $filename;
@@ -61,21 +52,14 @@ class AdminController extends Controller
             'message' => 'Admin Profile Updated Successfully', 
             'alert-type' => 'info'
         );
-
         return redirect()->route('admin.profile')->with($notification);
-
-    }// End Method
-
+    }
 
     public function ChangePassword(){
-
-        return view('admin.admin_change_password');
-
-    }// End Method
-
+        return view('admin.change_password');
+    }
 
     public function UpdatePassword(Request $request){
-
         $validateData = $request->validate([
             'oldpassword' => 'required',
             'newpassword' => 'required',
@@ -95,10 +79,6 @@ class AdminController extends Controller
             session()->flash('message','Old password is not match');
             return redirect()->back();
         }
-
-    }// End Method
-
-
-
+    }
 }
  

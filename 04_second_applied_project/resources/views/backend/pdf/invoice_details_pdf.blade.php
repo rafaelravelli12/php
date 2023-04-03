@@ -2,13 +2,10 @@
 @section('admin')
     <div class="page-content">
         <div class="container-fluid">
-
-            <!-- start page title -->
             <div class="row">
                 <div class="col-12">
                     <div class="page-title-box d-sm-flex align-items-center justify-content-between">
                         <h4 class="mb-sm-0"> Customer Payment Report </h4>
-
                         <div class="page-title-right">
                             <ol class="breadcrumb m-0">
                                 <li class="breadcrumb-item"><a href="javascript: void(0);"> </a></li>
@@ -19,13 +16,10 @@
                     </div>
                 </div>
             </div>
-            <!-- end page title -->
-
             <div class="row">
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
-
                             <div class="row">
                                 <div class="col-12">
                                     <div class="invoice-title">
@@ -37,7 +31,6 @@
                                         </h3>
                                     </div>
                                     <hr>
-
                                     <div class="row">
                                         <div class="col-6 mt-4">
                                             <address>
@@ -55,9 +48,6 @@
                                     </div>
                                 </div>
                             </div>
-
-
-
                             <div class="row">
                                 <div class="col-12">
                                     <div>
@@ -73,8 +63,6 @@
                                                             <td class="text-center"><strong>Customer Mobile</strong></td>
                                                             <td class="text-center"><strong>Address</strong>
                                                             </td>
-
-
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -84,31 +72,18 @@
                                                             <td class="text-center">{{ $payment['customer']['mobile_no'] }}
                                                             </td>
                                                             <td class="text-center">{{ $payment['customer']['email'] }}</td>
-
-
                                                         </tr>
-
-
                                                     </tbody>
                                                 </table>
                                             </div>
-
-
                                         </div>
                                     </div>
-
                                 </div>
-                            </div> <!-- end row -->
-
-
-
-
-
+                            </div>
                             <div class="row">
                                 <div class="col-12">
                                     <div>
                                         <div class="p-2">
-
                                         </div>
                                         <div class="">
                                             <div class="table-responsive">
@@ -127,12 +102,10 @@
                                                             </td>
                                                             <td class="text-center"><strong>Total Price</strong>
                                                             </td>
-
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         <!-- foreach ($order->lineItems as $line) or some such thing here -->
-
                                                         @php
                                                             $total_sum = '0';
                                                             
@@ -150,7 +123,6 @@
                                                                 <td class="text-center">{{ $details->selling_qty }}</td>
                                                                 <td class="text-center">{{ $details->unit_price }}</td>
                                                                 <td class="text-center">{{ $details->selling_price }}</td>
-
                                                             </tr>
                                                             @php
                                                                 $total_sum += $details->selling_price;
@@ -215,26 +187,20 @@
                                                                 <h4 class="m-0">${{ $payment->total_amount }}</h4>
                                                             </td>
                                                         </tr>
-
                                                         <tr>
                                                             <td colspan="7"
                                                                 style="text-align: center;font-weight: bold;">Paid Summary
                                                             </td>
-
                                                         </tr>
-
                                                         <tr>
                                                             <td colspan="4"
                                                                 style="text-align: center;font-weight: bold;">Date </td>
                                                             <td colspan="3"
                                                                 style="text-align: center;font-weight: bold;">Amount</td>
-
                                                         </tr>
                                                         @php
                                                             $payment_details = App\Models\PaymentDetail::where('invoice_id', $payment->invoice_id)->get();
-                                                            
                                                         @endphp
-
                                                         @foreach ($payment_details as $item)
                                                             <tr>
                                                                 <td colspan="4"
@@ -243,14 +209,11 @@
                                                                 <td colspan="3"
                                                                     style="text-align: center;font-weight: bold;">
                                                                     {{ $item->current_paid_amount }}</td>
-
                                                             </tr>
                                                         @endforeach
-
                                                     </tbody>
                                                 </table>
                                             </div>
-
                                             <div class="d-print-none">
                                                 <div class="float-end">
                                                     <a href="javascript:window.print()"
@@ -262,30 +225,13 @@
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
-                            </div> <!-- end row -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                            </div>
                         </div>
                     </div>
-                </div> <!-- end col -->
-            </div> <!-- end row -->
-
-        </div> <!-- container-fluid -->
-    </div>
+                </div>
+            </div>
+        </div>
+        <!-- container-fluid --
+        </div>
 @endsection
