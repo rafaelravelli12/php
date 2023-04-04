@@ -54,35 +54,35 @@ Route::controller(AboutController::class)->group(function () {
 });
 
 Route::controller(PortfolioController::class) -> group(function () {
-    Route::get('/all/portfolio', 'AllPortfolio') -> name('all.portfolio');
-    Route::get('/add/portfolio', 'AddPortfolio') -> name('add.portfolio');
+    Route::get('/all/movie_genrer', 'AllPortfolio') -> name('all.portfolio');
+    Route::get('/add/movie_genrer', 'AddPortfolio') -> name('add.portfolio');
     Route::post('/store/portfolio', 'StorePortfolio') -> name('store.portfolio');
-    Route::get('/edit/portfolio/{id}', 'EditPortfolio') -> name('edit.portfolio');
+    Route::get('/edit/movie_genrer/{id}', 'EditPortfolio') -> name('edit.portfolio');
     Route::post('/update/portfolio', 'UpdatePortfolio') -> name('update.portfolio');
-    Route::get('/delete/portfolio/{id}', 'DeletePortfolio') -> name('delete.portfolio');
-    Route::get('/movie_gender/details/{id}', 'PortfolioDetails')->name('portfolio.details');
-    Route::get('/movie_gender', 'HomePortfolio')->name('home.portfolio');
+    Route::get('/delete/movie_genrer/{id}', 'DeletePortfolio') -> name('delete.portfolio');
+    Route::get('/movie_genrer/details/{id}', 'PortfolioDetails')->name('portfolio.details');
+    Route::get('/movie_genrer', 'HomePortfolio')->name('home.portfolio');
 });
 
 Route::controller(BlogCategoryController::class)->group(function () {
-    Route::get('/all/blog/category', 'AllBlogCategory')->name('all.blog.category');
-    Route::get('/add/blog/category', 'AddBlogCategory')->name('add.blog.category');
+    Route::get('/all/movies/category', 'AllBlogCategory')->name('all.blog.category');
+    Route::get('/add/movies/category', 'AddBlogCategory')->name('add.blog.category');
     Route::post('/store/blog/category', 'StoreBlogCategory')->name('store.blog.category');
-    Route::get('/edit/blog/category/{id}', 'EditBlogCategory')->name('edit.blog.category');
+    Route::get('/edit/movies/category/{id}', 'EditBlogCategory')->name('edit.blog.category');
     Route::post('/update/blog/category/{id}', 'UpdateBlogCategory')->name('update.blog.category');
     Route::get('/delete/blog/category/{id}', 'DeleteBlogCategory')->name('delete.blog.category');
 });
 
 Route::controller(BlogController::class)->group(function () {
-    Route::get('/all/blog', 'AllBlog')->name('all.blog');
-    Route::get('/add/blog', 'AddBlog')->name('add.blog');
+    Route::get('/all/movie_reviews', 'AllBlog')->name('all.blog');
+    Route::get('/add/movie_reviews', 'AddBlog')->name('add.blog');
     Route::post('/store/blog', 'StoreBlog')->name('store.blog');
-    Route::get('/edit/blog/{id}', 'EditBlog')->name('edit.blog');
+    Route::get('/edit/movie_reviews/{id}', 'EditBlog')->name('edit.blog');
     Route::post('/update/blog', 'UpdateBlog')->name('update.blog');
-    Route::get('/delete/blog/{id}', 'DeleteBlog')->name('delete.blog');    
-    Route::get('/blog/details/{id}', 'BlogDetails')->name('blog.details');
-    Route::get('/category/blog/{id}', 'CategoryBlog')->name('category.blog');
-    Route::get('/blog', 'HomeBlog')->name('home.blog');
+    Route::get('/delete/movie_reviews/{id}', 'DeleteBlog')->name('delete.blog');    
+    Route::get('/movie_reviews/details/{id}', 'BlogDetails')->name('blog.details');
+    Route::get('/category/movie_reviews/{id}', 'CategoryBlog')->name('category.blog');
+    Route::get('/movie_reviews', 'HomeBlog')->name('home.blog');
 });
 
 Route::controller(FooterController::class)->group(function () {

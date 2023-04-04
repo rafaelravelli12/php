@@ -11,7 +11,7 @@
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="{{ url('/') }}">Home</a></li>
                                     <li class="breadcrumb-item"><a href="{{ url('/blog') }}">Movie Reviews</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Blog Details</li>
+                                    <li class="breadcrumb-item active" aria-current="page">{{ $blogs->blog_title }}</li>
                                 </ol>
                             </nav>
                         </div>

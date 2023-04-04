@@ -32,31 +32,31 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
-                        <span>Portfolio Page Setup</span>
+                        <span>Movie Genrer</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('all.portfolio') }}">All Portfolio</a></li>
-                        <li><a href="{{ route('add.portfolio') }}">Add Portfolio</a></li>
+                        <li><a href="{{ route('all.portfolio') }}">All Genrers</a></li>
+                        <li><a href="{{ route('add.portfolio') }}">Add Genre</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-account-circle-line"></i>
-                        <span>Blog Category</span>
+                        <span>Movie Categories</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('all.blog.category') }}">All Blog Category</a></li>
-                        <li><a href="{{ route('add.blog.category') }}">Add Blog Category</a></li>
+                        <li><a href="{{ route('all.blog.category') }}">All Movie Categories</a></li>
+                        <li><a href="{{ route('add.blog.category') }}">Add Movie Category</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-profile-line"></i>
-                        <span>Blog Page</span>
+                        <span>Movie Reviews</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('all.blog') }}">All Blog</a></li>
-                        <li><a href="{{ route('add.blog') }}">Add Blog</a></li>
+                        <li><a href="{{ route('all.blog') }}">All Movie Reviews</a></li>
+                        <li><a href="{{ route('add.blog') }}">Add Movie Review</a></li>
                     </ul>
                 </li>
                 <li>
