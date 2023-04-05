@@ -11,7 +11,6 @@ use Illuminate\Support\Carbon;
 class SupplierController extends Controller
 {
     public function SupplierAll(){
-        // $suppliers = Supplier::all();
         $suppliers = Supplier::latest()->get();
         return view('backend.supplier.supplier_all',compact('suppliers'));
     }
@@ -42,8 +41,8 @@ class SupplierController extends Controller
     }
 
     public function SupplierUpdate(Request $request){
-        $sullier_id = $request->id;
-        Supplier::findOrFail($sullier_id)->update([
+        $supplier_id = $request->id;
+        Supplier::findOrFail($supplier_id)->update([
             'name' => $request->name,
             'mobile_no' => $request->mobile_no,
             'email' => $request->email,
