@@ -1,4 +1,4 @@
-# first_applied_project
+# first_course_project_applied
 
 ### Estimeed Sirs,
 

@@ -1,4 +1,4 @@
-# 03_second_proposed_project
+# second_course_project_applied
 
 ### Estimeed Sirs,
 
