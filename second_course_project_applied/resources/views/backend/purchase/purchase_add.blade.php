@@ -28,7 +28,6 @@
                                         <label for="example-text-input" class="form-label">Supplier Name </label>
                                         <select id="supplier_id" name="supplier_id" class="form-select select2"
                                             aria-label="Default select example">
-
                                             <option selected="">Open this select menu</option>
                                             @foreach ($supplier as $supp)
                                                 <option value="{{ $supp->id }}">{{ $supp->name }}</option>
@@ -41,9 +40,7 @@
                                         <label for="example-text-input" class="form-label">Category </label>
                                         <select name="category_id" id="category_id" class="form-select select2"
                                             aria-label="Default select example">
-
                                             <option selected="">Open this select menu</option>
-
                                         </select>
                                     </div>
                                 </div>
@@ -52,9 +49,7 @@
                                         <label for="example-text-input" class="form-label">Product Name </label>
                                         <select name="product_id" id="product_id" class="form-select select2"
                                             aria-label="Default select example">
-
                                             <option selected="">Open this select menu</option>
-
                                         </select>
                                     </div>
                                 </div>
@@ -77,7 +72,7 @@
                                         <tr>
                                             <th>Category</th>
                                             <th>Product Name </th>
-                                            <th>PSC/KG</th>
+                                            <th>Quantity</th>
                                             <th>Unit Price </th>
                                             <th>Description</th>
                                             <th>Total Price</th>
@@ -111,9 +106,9 @@
 
     <script id="document-template" type="text/x-handlebars-template">
         <tr class="delete_add_more_item" id="delete_add_more_item">
-                <input type="hidden" name="date[]" value="@{{date}}">
-                <input type="hidden" name="purchase_no[]" value="@{{purchase_no}}">
-                <input type="hidden" name="supplier_id[]" value="@{{supplier_id}}">
+            <input type="hidden" name="date[]" value="@{{date}}">
+            <input type="hidden" name="purchase_no[]" value="@{{purchase_no}}">
+            <input type="hidden" name="supplier_id[]" value="@{{supplier_id}}">
             <td>
                 <input type="hidden" name="category_id[]" value="@{{category_id}}">
                 @{{ category_name }}

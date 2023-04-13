@@ -38,7 +38,6 @@
                                                 ->where('product_id', $item->id)
                                                 ->where('status', '1')
                                                 ->sum('buying_qty');
-                                            
                                             $selling_total = App\Models\InvoiceDetail::where('category_id', $item->category_id)
                                                 ->where('product_id', $item->id)
                                                 ->where('status', '1')

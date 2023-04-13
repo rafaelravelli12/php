@@ -68,12 +68,6 @@ Route::controller(ProductController::class)->group(function () {
     Route::get('/product/delete/{id}', 'ProductDelete')->name('product.delete');
 });
 
-// Purchase Revising
-// 05/04/2023
-
-
-
-
 Route::controller(PurchaseController::class)->group(function () {
     Route::get('/purchase/all', 'PurchaseAll')->name('purchase.all'); 
     Route::get('/purchase/add', 'PurchaseAdd')->name('purchase.add');
