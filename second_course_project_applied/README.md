@@ -34,7 +34,7 @@ Required commands to run Cloned Project:
 - /npm install
 - /php artisan serve
 - /npm run watch
-- query website.sql
+- query database.sql
 - Administration 
 	Login page: http://127.0.0.1:8000/login
 	Administration username: kazi
