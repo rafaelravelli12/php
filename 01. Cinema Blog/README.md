@@ -1,42 +1,43 @@
-# first_course_project_applied
+# Cinema Blog
 
-### Estimeed Sirs,
+Estimeed Sirs,
 
-This repository is being used to allocate my Applied Projects based on Udemy Course "Laravel 9 - Build Complete Inventory Management System A-Z",
-https://www.udemy.com/course/laravel-build-complete-inventory-management-system/.
+This repository allocates the Project based on Udemy Course [Laravel 9 - Build Complete Inventory Management System A-Z second part 1](https://www.udemy.com/course/laravel-build-complete-inventory-management-system/).
 
-The present solution is based on Course Author easylearningbd's repository (acessed 03/22/2023):
-https://github.com/easylearningbd/laravel9-basic-project
+You can track [Course Author easylearningbd's related repository](https://github.com/easylearningbd/laravel9-basic-project) (acessed 04/07/2023):
 
-------------
+## Project Structure
+The project was developed in the Operating System [Windows 11](https://www.microsoft.com/en-us/windows/windows-11?r=1)
 
-This software was developed in Windows 11 Environment:
-https://www.microsoft.com/en-us/windows/windows-11?r=1
+The project was developed with [PHP 8.1.0](https://windows.php.net/download#php-8.1)
 
-This software uses Composer as a PHP dependency manager, using PHP 8.1.0 version:
-https://getcomposer.org/
+The project was developed with the dependency manager [Composer 2.3.10](https://getcomposer.org/)
 
-This software uses Node 19 Version, installed from NVM:
-https://github.com/coreybutler/nvm-windows
+The project was developed with the framework [PHP Laravel v9.4.1](https://laravel.com/docs/9.x/releases)
 
-This software was developed in MySQL Server + Workbench ambient:
-https://dev.mysql.com/downloads/installer/
+The project was developed with Node 19, installed from [NVM](https://github.com/coreybutler/nvm-windows)
 
-This software was developed in HeidiSQL database administration tool:
-https://www.heidisql.com/
+This software was developed in [MySQL Server + Workbench ambient](https://dev.mysql.com/downloads/installer/)
 
-This software was developed in Visual Studio Code IDE:
-https://code.visualstudio.com/
+This software was developed in [HeidiSQL database administration tool](https://www.heidisql.com/)
 
-------------
+The project was developed in [Visual Studio Code IDE](https://code.visualstudio.com/)
 
-Required commands to run Cloned Project:
+![image](https://img.shields.io/badge/Windows-017AD7?style=for-the-badge&logo=windows&logoColor=white)
+![image](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![image](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
+![image](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
+![image](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
 
-- configure .env based on .env.example
-- /composer install
-- /npm install
-- /php artisan serve
-- /npm run watch
+## Commands to run the Project locally
+- Clone the Project via GIT
+- Open cloned root folder
+- Configure .env file from .env.example file
+- Command in terminal: /composer install
+- Command in terminal: php artisan key:generate
+- Command in terminal: /npm install
+- Command in terminal: /php artisan serve
+- Command in terminal: /npm run dev
 - query database.sql
 - Administration 
 	Login page: http://127.0.0.1:8000/login
