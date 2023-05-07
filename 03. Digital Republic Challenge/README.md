@@ -1,25 +1,25 @@
-# Desafio Digital Republic
+# Digital Republic Challenge
 
-Prezados senhores,
+Estimeed Sirs,
 
-Este Repositório aloca o Projeto requisitado no [Processo Seletivo da Empresa 'Digital Republic'](https://gitlab.com/digitalrepublic/code-challenge) . O cargo pretendido é o de Desenvoldedor Júnior PHP / Node.
+This Repository allocates the Project requested in the [Selection Process of the Company 'Digital Republic'](https://gitlab.com/digitalrepublic/code-challenge) . The intended position is Junior PHP / Node Developer.
 
-O Projeto está alocado em servidor, podendo ser [acessado online clicando aqui](http://18.230.20.148/) .
+The Project is located on a server and can be [accessed online by clicking here](http://18.230.20.148/) .
 
-## Estrutura do Projeto
-O projeto foi desenvolvido no Sistema Operacional [Windows 11](https://www.microsoft.com/en-us/windows/windows-11?r=1)
+## Project Structure
+The project was developed in the Operating System [Windows 11](https://www.microsoft.com/en-us/windows/windows-11?r=1)
 
-O projeto foi desenvolvido com [PHP 8.1.0](https://windows.php.net/download#php-8.1)
+The project was developed with [PHP 8.1.0](https://windows.php.net/download#php-8.1)
 
-O projeto foi desenvolvido com o gerenciador de dependências [Composer 2.3.10](https://getcomposer.org/)
+The project was developed with the dependency manager [Composer 2.3.10](https://getcomposer.org/)
 
-O projeto foi desenvolvido com o framework [PHP Laravel 9.19](https://laravel.com/docs/9.x/releases)
+The project was developed with the framework [PHP Laravel 9.19](https://laravel.com/docs/9.x/releases)
 
-O projeto foi desenvolvido com Node 18.14.2, instalado a partir do [NVM](https://github.com/coreybutler/nvm-windows)
+The project was developed with Node 18.14.2, installed from [NVM](https://github.com/coreybutler/nvm-windows)
 
-O projeto foi desenvolvido no [Visual Studio Code IDE](https://code.visualstudio.com/)
+The project was developed in [Visual Studio Code IDE](https://code.visualstudio.com/)
 
-O projeto está alocado em servidor [AWS EC2 Ubuntu Nginx](https://aws.amazon.com/console/)
+The project is located on server [AWS EC2 Ubuntu Nginx](https://aws.amazon.com/console/)
 
 ![image](https://img.shields.io/badge/Windows-017AD7?style=for-the-badge&logo=windows&logoColor=white)
 ![image](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
@@ -30,27 +30,25 @@ O projeto está alocado em servidor [AWS EC2 Ubuntu Nginx](https://aws.amazon.co
 ![image](https://img.shields.io/badge/Linux-E34F26?style=for-the-badge&logo=linux&logoColor=black)
 ![image](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)
 
-## Comandos para executar o Projeto localmente
-- Clonar o Projeto via GIT
-- Abrir a pasta raiz clonada
-- Configurar o arquivo .env a partir do arquivo .env.example
-- Comando no terminal: /composer install
-- Comando no terminal: /npm install
-- Comando no terminal: /php artisan serve
-- Comando no terminal: /npm run dev
-- Abrir Localhost http://127.0.0.1:8000 com o navegador de preferência
+## Commands to run the Project locally
+- Clone the Project via GIT
+- Open cloned root folder
+- Configure .env file from .env.example file
+- Command in terminal: /composer install
+- Command in terminal: /npm install
+- Command in terminal: /php artisan serve
+- Command in terminal: /npm run dev
+- Open Localhost http://127.0.0.1:8000 with preferred browser
 
-## Testes Unitários
-- Para execução dos testes unitários foi utilizada a biblioteca padrão PHPUnit
+## Unitary tests
+- To execute the unit tests, the PHPUnit standard library was used
 
 ![image](http://01-unit-test-digital-republic.s3-website-sa-east-1.amazonaws.com/)
 
-- Necessidade de verificar falha associada ao teste 'Validation passes with valid data':
+- Need to verify failure associated with the 'Validation passes with valid data' test:
 ```
 The test needs to be updated, since it is only validating the ProjectFormRequest rules() function,
 it should also validate the ProjectFormRequest withValidator() function.
 ```
 
-Atenciosamente,
-
-https://www.linkedin.com/in/rafaeldravelli/
+Graciously,
