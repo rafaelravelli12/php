@@ -1,0 +1,96 @@
+body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+	/* background-color: rgba(0, 0, 0, 0.5); */
+}
+
+header {
+	background-color: rgb(63, 98, 172);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	color: white;
+	padding: 1px;
+	text-align: center;
+}
+
+main {
+	margin: 20px;
+}
+
+.h2_edited {
+	color: rgb(196, 116, 11);
+}
+
+.h4_edited {
+	color: rgb(196, 116, 11);
+}
+
+label {
+	display: inline-block;
+	margin-bottom: 5px;
+	width: 20%;
+}
+
+input[type="number"] {
+	width: 20%;
+	padding: 4px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin: 5px;
+	vertical-align: middle;
+}
+
+button {
+	background-color: rgb(196, 116, 11);
+	border: none;
+	color: white;
+	padding: 12px 24px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 4px;
+	cursor: pointer;
+	margin-top: 10px;
+}
+
+button:hover {
+	background-color: rgb(255, 203, 106);
+}
+
+a {
+	text-decoration: none;
+}
+
+.error {
+	color: red;
+	font-size: 14px;
+	margin-top: 5px;
+}
+
+footer {
+	background-color: rgb(63, 98, 172);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	color: white;
+	padding: 1px;
+	text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+	label {
+		width: 60%;
+	}
+
+	input[type="number"] {
+		width: 30%;
+	}
+
+	.h2_edited {
+		text-align: center;
+	}
+
+	button {
+		margin: 0 auto !important;
+		display: block !important;
+	}
+}
