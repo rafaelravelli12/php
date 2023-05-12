@@ -5,6 +5,7 @@ Estimeed Sirs,
 This Repository allocates the Project requested in the [Selection Process of the Company 'Digital Republic'](https://gitlab.com/digitalrepublic/code-challenge) . The intended position is Junior PHP / Node Developer.
 
 Atualmente offline! Servidor em manutenção
+
 The Project is located on a Cloud Server and can be [accessed online by clicking here](http://18.230.20.148/) .
 
 ## Project Structure
