@@ -25,8 +25,11 @@ The project was developed in:
 ## Commands to run the Project locally
 - Clone the Project via GIT;
 - Navigate into the project directory;
+- Create a 'laravel' Database in mysql;
 - Command in cmd terminal:
 ```
+composer install
+
 cp .env.example .env
 
 npm install && npm run dev
@@ -36,7 +39,10 @@ php artisan key:generate
 php artisan migrate
 
 php artisan db:seed
+
+php artisan serve
 ```
+- Open Localhost http://127.0.0.1:8000 with preferred browser;
 - Logins allowed:
 ```
 Login: administrador1@laravel.com Password:password
