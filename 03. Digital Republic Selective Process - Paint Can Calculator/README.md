@@ -6,7 +6,7 @@ This Repository allocates the Project requested in the [Selection Process of the
 
 Atualmente offline! Servidor em manutenção
 
-The Project is located on a Cloud Server and can be [accessed online by clicking here](http://18.230.20.148/) .
+The Project is located on a Cloud Server and can be [accessed online by clicking here](http://54.207.213.245/) .
 
 ## Project Structure
 The project was developed in the Operating System [Windows 11](https://www.microsoft.com/en-us/windows/windows-11?r=1)
