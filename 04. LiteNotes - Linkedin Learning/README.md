@@ -2,6 +2,8 @@
 
 Estimeed Sirs,
 
+I recommend the course “Laravel 9.0 Essential Training” by Shruti Balasa. Skills covered: WSL, Sail Docker Containers, PHP Laravel 10, MySQL, Breeze for Authentication, Eloquent Relationships and CRUD.
+
 This Repository allocates my applied project base on [Linkedin Learning course by Shruti Balasa](https://www.linkedin.com/learning/?trk=sem-ga_campid.17484605195_asid.134975982462_crid.603529745452_kw.linkedin%20learning_d.c_tid.kwd-310582843911_n.g_mt.e_geo.1001773)
 
 ## Project Structure
