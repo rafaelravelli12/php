@@ -2,6 +2,8 @@
 
 Estimeed Sirs,
 
+I recommend the course “Laravel 9 - Build Complete Inventory Management System A-Z” by  Kazi Ariyan. Skills covered: PHP Laravel 9, MySQL, Breeze for Authentication, Eloquent Relationships and CRUD.
+
 This repository allocates the Project based on Udemy Course [Laravel 9 - Build Complete Inventory Management System A-Z second part 2](https://www.udemy.com/course/laravel-build-complete-inventory-management-system/).
 
 You can track [Course Author easylearningbd's related repository](https://github.com/easylearningbd/inventory-management-system) (acessed 04/07/2023):
