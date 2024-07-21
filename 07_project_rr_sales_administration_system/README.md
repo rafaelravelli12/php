@@ -1,4 +1,4 @@
-## About Laravel
+## Project: RR Sales Administration System
 
 # terminal commands
 Your windows machine must be running php 8.2, mysql, node.js and composer
