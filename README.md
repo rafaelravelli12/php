@@ -1,7 +1,7 @@
-# Projects PHP Laravel
+# Projects PHP
 
 ### Estimeed Sirs,
 
-This repository is being used to allocate my public projects using PHP Laravel.
+This repository is being used as showcase for courses and personal projects using PHP.
 
 Graciously,
