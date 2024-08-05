@@ -1,6 +1,6 @@
 <img src="php_logo.png" width="300" />
 
-![GitHub commits](https://img.shields.io/github/commit-activity/m/rafaelravelli12/php_laravel)
+![GitHub commits](https://img.shields.io/github/commit-activity/m/rafaelravelli12/php)
 
 # PHP
 
