@@ -34,6 +34,7 @@ The project was developed in [Visual Studio Code IDE](https://code.visualstudio.
 ## Commands to run the Project locally
 - Clone the Project via GIT
 - Open cloned root folder
+- Unzip public.zip and copy it in root project folder
 - Configure .env file from .env.example file
 - Command in terminal: /composer install
 - Command in terminal: php artisan key:generate
