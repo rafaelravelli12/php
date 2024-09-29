@@ -15,15 +15,7 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-    Route::get('/establishments', [App\Http\Controllers\EstablishmentsController::class, 'index']);
-    Route::get('/establishments/create', [App\Http\Controllers\EstablishmentsController::class, 'create']);
-    Route::post('/establishments/store', [App\Http\Controllers\EstablishmentsController::class, 'store']);
-    Route::get('/establishments/{id}', [App\Http\Controllers\EstablishmentsController::class, 'view']);
-    Route::get('/establishments/{id}/edit', [App\Http\Controllers\EstablishmentsController::class, 'edit']);
-    Route::put('/establishments/{id}', [App\Http\Controllers\EstablishmentsController::class, 'update']);
-    Route::get('/establishments/{id}/delete', [App\Http\Controllers\EstablishmentsController::class, 'deleteView']);
-    Route::delete('/establishments/{id}', [App\Http\Controllers\EstablishmentsController::class, 'destroy']);
-
+    
     Route::get('/users', [App\Http\Controllers\UsersController::class, 'index']);
     Route::get('/users/create', [App\Http\Controllers\UsersController::class, 'create']);
     Route::post('/users/store', [App\Http\Controllers\UsersController::class, 'store']);
@@ -32,7 +24,16 @@ Route::middleware('auth')->group(function () {
     Route::put('/users/{id}', [App\Http\Controllers\UsersController::class, 'update']);
     Route::get('/users/{id}/delete', [App\Http\Controllers\UsersController::class, 'deleteView']);
     Route::delete('/users/{id}', [App\Http\Controllers\UsersController::class, 'destroy']);
-
+    
+    Route::get('/establishments', [App\Http\Controllers\EstablishmentsController::class, 'index']);
+    Route::get('/establishments/create', [App\Http\Controllers\EstablishmentsController::class, 'create']);
+    Route::post('/establishments/store', [App\Http\Controllers\EstablishmentsController::class, 'store']);
+    Route::get('/establishments/{id}', [App\Http\Controllers\EstablishmentsController::class, 'view']);
+    Route::get('/establishments/{id}/edit', [App\Http\Controllers\EstablishmentsController::class, 'edit']);
+    Route::put('/establishments/{id}', [App\Http\Controllers\EstablishmentsController::class, 'update']);
+    Route::get('/establishments/{id}/delete', [App\Http\Controllers\EstablishmentsController::class, 'deleteView']);
+    Route::delete('/establishments/{id}', [App\Http\Controllers\EstablishmentsController::class, 'destroy']);
+    
     Route::get('/sales', [App\Http\Controllers\SalesController::class, 'index']);
     Route::get('/sales/create', [App\Http\Controllers\SalesController::class, 'create']);
     Route::get('/sales/{id}/qrcode', [App\Http\Controllers\SalesController::class, 'qrcode']);

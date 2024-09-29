@@ -23,7 +23,8 @@ class User extends Authenticatable
         'email',
         'password',
         'role',
-        'establishment_id'
+        'establishment_id',
+        'placa_do_carro'
     ];
 
     /**

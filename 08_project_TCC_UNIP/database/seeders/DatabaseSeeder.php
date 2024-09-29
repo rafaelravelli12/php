@@ -25,14 +25,14 @@ class DatabaseSeeder extends Seeder
             'email' => 'globaladmin@laravel.com',
             'role' => 'admin',
             'password' => Hash::make('95!8p@2y_/#YgkzB'),
-            'placa_do_carro' => ''
+            'placa_do_carro' => 'CEA-3349'
         ]);
         \App\Models\User::factory()->create([
             'name' => 'user',
             'email' => 'user@laravel.com',
             'role' => 'user',
             'password' => Hash::make('95!8p@2y_/#YgkzB'),
-            'placa_do_carro' => 'FAA1245'
+            'placa_do_carro' => 'FAA-1245'
         ]);
     }
 }

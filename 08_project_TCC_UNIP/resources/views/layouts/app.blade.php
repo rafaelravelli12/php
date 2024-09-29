@@ -32,40 +32,10 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <!-- Left Side Of Navbar -->
-                        <ul class="navbar-nav me-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ url('/establishments') }}">Establishments</a>
-                            </li>
+                        <ul class="navbar-nav me-auto">                            
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('/users') }}">Users</a>
-                            </li>
-                            @if(auth()->user()->role == "globaladmin")
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ url('/audit') }}">Audit</a>
-                                </li>
-                            @endif
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ url('/clients') }}">Clients</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ url('/sales') }}">Sales</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ url('/products') }}">Products</a>
-                            </li>
-                            {{-- <li class="nav-item">
-                                <a class="nav-link" href="#">Label 2</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Dropdown
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                </div>
-                            </li> --}}
+                            </li>                            
                         </ul>
                         <!-- Right Side Of Navbar -->
                         <ul class="navbar-nav ms-auto">

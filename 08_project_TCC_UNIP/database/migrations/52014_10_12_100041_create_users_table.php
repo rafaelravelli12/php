@@ -18,6 +18,7 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('role')->default('admin');
             $table->string('placa_do_carro')->nullable();
+            $table->boolean('carro_estacionado')->default(true);
             $table->string('password');            
             $table->rememberToken();
             $table->timestamps();

@@ -4,11 +4,9 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            @if (auth()->user()->role == 'globaladmin' || auth()->user()->role == 'localadmin')
             <div class="mb-3">
                 <a href="{{ url('/users/create') }}" class="btn btn-primary">{{ __('Add New User') }}</a>
             </div>
-            @endif
             <div class="card">
                 <div class="card-header">{{ __('List of Users') }}</div>
                 <div class="card-body">                    
@@ -19,13 +17,8 @@
                                     <th scope="col">Id</th>
                                     <th scope="col">Name</th>
                                     <th scope="col">Email</th>
-                                    <th scope="col">Establishment</th>
-                                    <th scope="col">Role</th>
-                                    <th scope="col">View</th>
-                                    @if(auth()->user()->role == 'globaladmin' || auth()->user()->role == 'localadmin')
-                                        <th scope="col">Edit</th>
-                                        <th scope="col">Delete</th>
-                                    @endif
+                                    <th scope="col">Placa do Carro</th>
+                                    <th scope="col">Update</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -34,13 +27,18 @@
                                     <td>{{ $user->id }}</td>
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->email }}</td>
-                                    <td>{{ $user->establishment->name }}</td>
-                                    <td>{{ $user->role }}</td>
-                                    <td><a href="{{ url('/users/' . $user->id) }}" class="btn btn-sm btn-primary">{{ __('View') }}</a></td>
-                                    @if(auth()->user()->role == 'globaladmin' || auth()->user()->role == 'localadmin')
-                                        <td><a href="{{ url('/users/' . $user->id . '/edit') }}" class="btn btn-sm btn-secondary">{{ __('Edit') }}</a></td>
-                                        <td><a href="{{ url('/users/' . $user->id . '/delete') }}" class="btn btn-sm btn-danger">{{ __('Delete') }}</a></td>
-                                    @endif
+                                    <td>{{ $user->placa_do_carro }}</td>
+                                    <td>
+                                        @if($user->carro_estacionado)
+                                            <a href="{{ url('/users/' . $user->id . '/edit') }}" class="btn btn-sm btn-success">
+                                                <i class="fas fa-check"></i> Carro Estacionado
+                                            </a>
+                                        @else
+                                            <a href="{{ url('/users/' . $user->id . '/edit') }}" class="btn btn-sm btn-danger">
+                                                <i class="fas fa-times"></i> Carro Não Estacionado
+                                            </a>
+                                        @endif
+                                    </td>
                                 </tr>
                                 @endforeach
                             </tbody>

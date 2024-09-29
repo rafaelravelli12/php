@@ -34,41 +34,12 @@
                             </div>
                         </div>
 
-                        @if (auth()->user()->role == "globaladmin")
-                            <div class="form-group row mb-3">
-                                    <label for="nome" class="col-md-4 col-form-label text-md-right">Establishment</label>
-                                    <div class="col-md-6">
-                                    <select class="form-select" name="establishment_id" required>
-                                        <option value="" selected disabled>Select User Establishment</option>
-                                        @foreach ($establishments as $establishment)
-                                            @if ($establishment->id !== 1)
-                                                <option value="{{ $establishment->id }}">{{ $establishment->name }}</option>
-                                            @endif
-                                        @endforeach
-                                    </select>
-                                </div>
-                            </div>
-                        @else
-                            <div class="form-group row mb-3">
-                                <label for="nome" class="col-md-4 col-form-label text-md-right">Establishment</label>
-                                <div class="col-md-6">
-                                    <input type="hidden" name="establishment_id" value="{{ auth()->user()->establishment->id }}">
-                                    <input type="text" class="form-control" value="{{ auth()->user()->establishment->name }}" disabled>
-                                </div>
-                            </div>
-                        @endif
-
-                        <div class="form-group row mt-3 mb-3">
-                            <label for="role" class="col-md-4 col-form-label text-md-right">{{ __('Role') }}</label>
+                        <div class="form-group row mb-3">
+                            <label for="cnpj" class="col-md-4 col-form-label text-md-right">{{ __('Placa do Carro') }}</label>
                             <div class="col-md-6">
-                                <select name="role" id="role" class="form-select mt-1" required>
-                                    <option value="" selected disabled>Select Role</option>
-                                    @foreach(['localadmin', 'operational'] as $status)
-                                        <option value="{{ $status }}">{{ $status }}</option>
-                                    @endforeach
-                                </select>
+                                <input id="placa_do_carro" type="text" class="form-control" name="placa_do_carro" required>
                             </div>
-                        </div>                      
+                        </div>                        
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
